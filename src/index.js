@@ -8,6 +8,18 @@ import reducers from './reducers';
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
+class Hello extends React.Component {
+  render() {
+    return <div>hello</div>
+  }
+}
+
+class Goodbye extends React.Component {
+  render() {
+    return <div>goodbye</div>
+  }
+}
+
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <App />
